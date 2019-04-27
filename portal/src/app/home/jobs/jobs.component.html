@@ -1,0 +1,72 @@
+
+<!-- Jobs -->
+<div class="section-padding-bottom alice-bg">
+  <div class="container">
+    <div class="row" style='justify-content: center'>
+      <h1>
+        Recent Job
+      </h1>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+            <div class="row">
+              <div class="col-lg-6">
+                <div *ngFor="let job of jobs | slice:0:totalJobs/2" class="job-list half-grid">
+                  <div class="thumb">
+                    <a href="#">
+                      <img *ngIf="job.company_logo" [src]="job.company_logo" class="img-fluid" [alt]="job.company">
+                      <img *ngIf="!job.company_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzPP-UT58SkvJIzO_m2EdEdLCetQmrPn4pWkGpo-y9pupRj5oIAg" class="img-fluid" >
+                    </a>
+                  </div>
+                  <div class="body">
+                    <div class="content">
+                      <h4><a href="job-details.html">{{ job.company }}</a></h4>
+                      <div class="info">
+                        <span *ngFor="let tag of job.tags" class="company"><a href="#">{{ tag }}</a></span>
+                      </div>
+                    </div>
+                    <div class="more">
+                      <div class="buttons">
+                        <a href="#" class="button">Apply Now</a>
+                        <a href="#" class="favourite"><i data-feather="heart"></i></a>
+                      </div>
+                      <p class="deadline">Deadline: Oct 31, 2018</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                  <div *ngFor="let job of jobs | slice:totalJobs/2:totalJobs" class="job-list half-grid">
+                    <div class="thumb">
+                      <a href="#">
+                        <img *ngIf="job.company_logo" [src]="job.company_logo" class="img-fluid" [alt]="job.company">
+                        <img *ngIf="!job.company_logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzPP-UT58SkvJIzO_m2EdEdLCetQmrPn4pWkGpo-y9pupRj5oIAg" class="img-fluid" >
+                      </a>
+                    </div>
+                    <div class="body">
+                      <div class="content">
+                        <h4><a href="job-details.html">{{ job.company }}</a></h4>
+                        <div class="info">
+                          <span *ngFor="let tag of job.tags" class="company"><a href="#">{{ tag }}</a></span>
+                        </div>
+                      </div>
+                      <div class="more">
+                        <div class="buttons">
+                          <a href="#" class="button">Apply Now</a>
+                          <a href="#" class="favourite"><i data-feather="heart"></i></a>
+                        </div>
+                        <p class="deadline">Deadline: Oct 31, 2018</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jobs End -->
