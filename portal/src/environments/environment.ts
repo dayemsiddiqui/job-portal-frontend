@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://134.209.244.189:5000/'
+  baseUrl: 'https://api.gethirednow.dev/'
 };
 
 /*
