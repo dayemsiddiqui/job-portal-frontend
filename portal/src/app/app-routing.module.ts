@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './home/home.module#HomeModule'
-  }
+  },
+  {
+    path: 'explore',
+    loadChildren: './job-listings/job-listings.module#JobListingsModule'
+  },
 ];
 
 @NgModule({

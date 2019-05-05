@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { JobsService } from './jobs.service';
+import { JobsService } from './shared/services/jobs.service';
 
 @NgModule({
   declarations: [
